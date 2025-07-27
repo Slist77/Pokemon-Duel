@@ -48,7 +48,7 @@ void loop() {
     int rRandSpin = random(0, 719);
     Serial.print("Red only spin: ");
     Serial.println(rRandSpin);
-    redServo.write(180);
+    redServo.write(0);
     redEndTime = now + 720 + rRandSpin;
     redSpinning = true;
   }
@@ -62,7 +62,7 @@ void loop() {
     Serial.println(rRandSpin);
 
     blueServo.write(180);
-    redServo.write(180);
+    redServo.write(0);
     blueEndTime = now + 850 + bRandSpin;
     redEndTime = now + 720 + rRandSpin;
     blueSpinning = true;
